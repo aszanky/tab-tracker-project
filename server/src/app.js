@@ -7,7 +7,9 @@ const app = express();
 
 PORT = process.env.PORT || 8080;
 
+// morgan is a logger HTTP Req, HTTP Res
 app.use(morgan('combined'));
+// Body Parser is used for parse any body of json (HTTP POST)
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
