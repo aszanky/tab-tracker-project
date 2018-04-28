@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w src/app.js --exec 'node lint && node'",
+    "start": "nodemon src/app.js --exec \"npm run lint && node\"",
     "lint": "eslint **/*.js"
   },
   "keywords": [],
@@ -12,6 +12,13 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
     "nodemon": "^1.17.3"
   },
   "dependencies": {

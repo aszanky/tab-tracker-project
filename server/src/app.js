@@ -5,20 +5,20 @@ const morgan = require('morgan');
 
 const app = express();
 
-PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // morgan is a logger HTTP Req, HTTP Res
 app.use(morgan('combined'));
 // Body Parser is used for parse any body of json (HTTP POST)
 app.use(bodyParser.json());
+app.use(cors());
 
-app.get('/', (req, res) => {
+app.post('/register', (req, res) => {
     res.send({
-        message: 'This is your first API'
-    })
-})
+        message: `Hello ${req.body.email} Your users was registered`
+    });
+});
 
 app.listen(PORT, () => {
     console.log(`Running in localhost:${PORT}`);
-})
-
+});
