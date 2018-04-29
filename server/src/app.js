@@ -15,6 +15,8 @@ app.use(cors());
 
 require('./routes')(app);
 
+// if you want to clean DB on dev using sync({force: true}), once only
+
 sequelize.sync()
     .then(() => {
         app.listen(config.port);

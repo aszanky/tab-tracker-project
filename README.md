@@ -8,3 +8,6 @@
 ### BODY PARSER --> to parse json body 
 ### MORGAN --> to log a HTTP
 ### CORS --> CROSS ORIGIN RESOURCE SHARING
+### BCRYPT
+### BLUEBIRD
+### JWT
