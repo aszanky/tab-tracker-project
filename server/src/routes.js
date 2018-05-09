@@ -9,5 +9,7 @@ module.exports = (app) => {
 
     app.get('/songs', SongsController.index);
 
+    app.get('/songs/:id', SongsController.show);
+
     app.post('/songs', SongsController.post);
 };
