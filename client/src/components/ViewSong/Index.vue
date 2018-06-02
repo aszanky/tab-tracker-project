@@ -51,13 +51,5 @@ export default {
 </script>
 
 <style scoped>
-textarea {
-    font-family: monospace;
-    width: 100%;
-    border: none;
-    height: 600px;
-    overflow: auto;
-    border-style: none;
-    border-color: transparent;
-}
+
 </style>

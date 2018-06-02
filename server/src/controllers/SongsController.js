@@ -19,7 +19,7 @@ module.exports = {
             res.send(song);
         } catch (error) {
             res.status(500).send({
-                error: 'An error was happened trying to fetch the songs'
+                error: 'An error was happened trying to show the songs'
             });
         };
     },
@@ -30,6 +30,20 @@ module.exports = {
         } catch (error) {
             res.status(500).send({
                 error: 'An error was happened trying to create the songs'
+            });
+        };
+    },
+    async put (req, res) {
+        try {
+            const song = await Song.update(req.body, {
+                where: {
+                    id: req.params.id
+                }
+            });
+            res.send(song);
+        } catch (error) {
+            res.status(500).send({
+                error: 'An error was happened trying to update the songs'
             });
         };
     }
